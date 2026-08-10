@@ -1,0 +1,559 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2f7 0%,
+            #dfe7ef 100%
+        );
+
+    color: #222;
+}
+
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1f2937,
+            #111827
+        );
+
+    color: white;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.header-content {
+    width: 92%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f59e0b;
+
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.logo h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.logo span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    color: #cbd5e1;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.header-title {
+    font-size: 15px;
+
+    color: #d1d5db;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    flex: 1;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 55px 20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.prediction-card {
+    width: 100%;
+
+    max-width: 650px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 38px;
+
+    box-shadow:
+        0 15px 45px rgba(15, 23, 42, 0.12);
+
+    border: 1px solid #e5e7eb;
+}
+
+
+.card-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.card-header h1 {
+    font-size: 30px;
+
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+
+.card-header p {
+    color: #6b7280;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #374151;
+
+    margin-bottom: 10px;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+
+input[type="number"],
+select {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    color: #111827;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+input[type="number"]:focus,
+select:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+.input-wrapper input {
+    padding-right: 75px;
+}
+
+
+.unit {
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   OPTION BUTTONS
+========================= */
+
+.button-group {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+}
+
+
+.option-btn {
+    height: 48px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #374151;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.option-btn:hover {
+    border-color: #2563eb;
+
+    color: #2563eb;
+}
+
+
+.option-btn.active {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: white;
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================
+   PREDICT BUTTON
+========================= */
+
+.predict-button {
+    width: 100%;
+
+    height: 55px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.predict-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+.predict-button:active {
+    transform: translateY(0);
+}
+
+
+.predict-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+    display: none;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ecfdf5,
+            #f0fdf4
+        );
+
+    border: 1px solid #bbf7d0;
+}
+
+
+.result-label {
+    color: #166534;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+
+    margin-bottom: 8px;
+}
+
+
+.estimated-price {
+    color: #15803d;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+
+.result-note {
+    color: #4b5563;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 9px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    color: #b91c1c;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+
+    padding: 25px 20px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.footer span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header-content {
+        min-height: 70px;
+    }
+
+    .header-title {
+        display: none;
+    }
+
+    .main {
+        padding: 25px 15px;
+    }
+
+    .prediction-card {
+        padding: 25px 20px;
+    }
+
+    .card-header h1 {
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .button-group {
+        gap: 6px;
+    }
+
+    .option-btn {
+        height: 44px;
+    }
+
+    .estimated-price {
+        font-size: 28px;
+    }
+
+}
